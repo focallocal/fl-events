@@ -154,11 +154,57 @@
              Second Step
      ----------------------------- */
 
-  #second-step{
+  #second-step  {
+
+    @media (max-width: 575px) {
+      .large-only {
+        display: none;
+      }
+      .conditional-time {
+        &::before {
+          width: 45%;
+          content: ""
+        }
+        .select-field::before {
+          width: 45%;
+        }
+      }
+      .date-hours-box {
+        flex-direction: column;
+        .date-field, .select-field {
+          width: 45%;
+        }
+        .time-display {
+          min-width: 60px;
+        }
+      }
+    }
     .date-hours-coupled {
-      .select-field{
-        position: relative;
-        top: -1em;
+      .date-hours-single {
+        display: flex;
+      }
+      .date-field {
+        label {display: none}
+      }
+      .select-field {
+        padding-left: 0.5em;
+        .time-box {
+          display: flex;
+          width: 115px;
+          .time-display {
+            border: 1px solid rgb(206, 212, 218);
+            border-left: none;
+            border-right: none;
+            height: 100%;
+            padding: 6px;
+            margin: 0px;
+            width: 75px;
+            text-align: center;
+          }
+          .time-btn {
+            border: 1px solid rgb(206, 212, 218);
+          }
+        }
       }
     }
   }

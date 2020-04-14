@@ -6,6 +6,7 @@ import DateField from './DateField'
 import InputField from './InputField'
 import NumberField from './NumberField'
 import SelectField from './SelectField'
+import TimePicker from './TimePicker'
 
 export default class AutoField extends BaseField {
     static displayName = 'AutoField';
@@ -23,6 +24,7 @@ export default class AutoField extends BaseField {
           case 'select': props.component = SelectField; break
           case 'textarea': props.component = InputField; break
           case 'number': props.component = InputField; break
+          case 'timePicker': props.component = TimePicker; break
         }
       } else {
         switch (fieldType) {
